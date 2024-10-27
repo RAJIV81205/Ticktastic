@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+#loader-container{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.loader {
+    width: 80px;
+    aspect-ratio: 1;
+    background: 
+      radial-gradient(farthest-side at top,#0000 calc(100% - 21px),lightblue calc(100% - 20px) 99%,#0000) bottom/100% 50%,
+      radial-gradient(farthest-side,lightblue 94%,#0000 ) left /20px 20px,
+      radial-gradient(farthest-side,lightblue 94%,#0000 ) right/20px 20px;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    inset: auto 0 0;
+    margin: auto;
+    border-radius: 50%;
+    background: orange;
+    transform-origin: 50% -20px;
+    animation: l14 1s infinite cubic-bezier(0.5,623,0.5,-623);
+  }
+  @keyframes l14 { 
+   100% {transform: rotate(0.5deg)}
+  }
+
+.global-container{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+  
+
+header{
+    width: 100%;
+    background-color: #FFd700;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 15px 0;
+}
+
+.svg-divider {
+    position: relative;
+    width: 100%;
+    height: 20px; /* Adjust this height to fit closer to the boundary */
+    overflow: hidden; /* Ensures no overflow */
+    background-color: transparent;
+    margin-top: -5px; /* Adjust to make SVG overlap slightly with top section */
+}
+
+.svg-divider svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.logo{
+    width: 15%;
+    margin-left:30px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+span{
+    width: 100%;
+   background-color: black;
+   height: 2px;
+   display: block;
+}
+
+.navbar{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 25px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+ul li{
+    list-style: none;
+    padding: 10px 25px;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+}
+
+#login{
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 6px;
+    justify-content: flex-start;
+    margin: 0 30px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 0px black;
+    cursor: pointer;
+}
+
+.main{
+    width: 100%;
+    height: fit-content;
+    background-color: #FFd700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.main-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    min-height: fit-content;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.main-title{
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    font-size: 4rem; /* Large font for the heading */
+    font-weight: 700; /* Bold heading */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    margin-bottom: 0px; /* Space between heading and subtext */
+}
+
+.main-text p{
+    text-align: center;
+    font-size: 1.5rem; /* Smaller font for the subtext */
+    color: #333; /* Slightly darker text for contrast */
+    letter-spacing: 1px; /* Add some letter spacing */
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-img{
+    margin-top: 20px;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-img img{
+    width: 400px;
+    height: 400px;
+}
+
+.book-now{
+    border: 2px solid black;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px black;
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    background-color: #77f5ad;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.book-now:hover{
+    
+    animation: button 0.2s forwards;
+}
+
+@keyframes button {
+    0%{
+        box-shadow: 3px 3px 0px black;
+        scale: 1;
+    }
+
+    100%{
+        box-shadow: 0px 0px 0px black;
+        scale: 1.02;
+    }
+}
+
+.second-main{
+    padding: 50px 0;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(55, 214, 239);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 200px;
+    margin: 0 50px;
+    justify-content: space-between;
+}
+
+.circle img{
+    padding: 8px;
+    background-color: white;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.circle p{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.8rem;
+    text-align: center;
+
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container{
+    margin: 25px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    height: fit-content;
+    align-items: center;
+}
+
+.card{
+    height: fit-content;
+    width: 220px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid black;
+    margin-top: 15px;
+    padding-bottom: 5px;
+
+}
+
+.card img{
+    width: 100%;
+    height: fit-content;
+    border-radius: 25px 25px 0 0;
+    border: 1px solid black;
+    object-fit: cover;
+    box-shadow: 0 2px 6px rgba(128, 128, 128, 0.459);
+}
+
+.card h3{
+    text-align: center;
+    height: fit-content;
+    text-wrap:wrap;
+    font-size: 1.3rem;
+    font-family: "Slabo 27px", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    padding: 10px 0;
+    letter-spacing: 0.5px;
+}
+
+#book-ticket{
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.hero h2{
+    font-size: 2.5rem;
+    margin: 25px 0 10px 0;
+    text-decoration: underline;
+}
