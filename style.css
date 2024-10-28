@@ -14,8 +14,18 @@
     font-family: "Itim", cursive;
     font-weight: 400;
     font-style: normal;
+    
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
+
+a:-webkit-any-link{
+    text-decoration: none;
+    color: black;
+}
 
 #loader-container{
     position: fixed;
@@ -226,24 +236,17 @@ ul li a {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .book-now:hover{
+    transform: scale(1.03);
+    box-shadow:0 0 0 black;
+    cursor: pointer;
     
-    animation: button 0.2s forwards;
 }
 
-@keyframes button {
-    0%{
-        box-shadow: 3px 3px 0px black;
-        scale: 1;
-    }
 
-    100%{
-        box-shadow: 0px 0px 0px black;
-        scale: 1.02;
-    }
-}
 
 .second-main{
     padding: 50px 0;
@@ -253,6 +256,7 @@ ul li a {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -286,6 +290,7 @@ ul li a {
 }
 
 .hero{
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -295,7 +300,7 @@ ul li a {
 }
 
 .card-container{
-    margin: 25px 0;
+    margin: 30px 0;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -314,9 +319,17 @@ ul li a {
     justify-content: flex-start;
     align-items: center;
     border: 2px solid black;
-    margin-top: 15px;
+    margin: 20px 0;
     padding-bottom: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .card img{
@@ -341,15 +354,29 @@ ul li a {
     letter-spacing: 0.5px;
 }
 
-#book-ticket{
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
 
 .hero h2{
-    font-size: 2.5rem;
-    margin: 25px 0 10px 0;
+    font-size: 2rem;
+    margin: 30px 0 10px 0;
     text-decoration: underline;
+    font-family: 'Poppins', sans-serif; /* Choose a modern font */
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.detail-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    height: fit-content;
+}
+
+#movie-name{
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+    height: 15px ;
 }
