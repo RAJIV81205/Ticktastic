@@ -25,9 +25,60 @@
                     <li><a href=#>My Bookings</a></li>
                     <li><a href=#>Contact Us</a></li>
                 </ul>
-                <button id="login">Sign In </button>
+                <button id="login"  onclick=showLogin()>Sign In </button>
             </div>
         </header>
+
+
+        <div id="my-popover">
+            <div class="login-container" id="login-container">
+                <div class="login-header">
+                    <h2>Welcome Back!</h2>
+                    <p>Please login to continue</p>
+                </div>
+                <form id="login-form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <div class="login-footer">
+                    <p onclick="showSignup()">Don't have an account? Sign Up</p>
+                </div>
+            </div>
+            <div id="signup-container">
+                <h2>Create an Account</h2>
+                <form id="signup-form">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" required min="1">
+            
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+            
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+            
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="signup-footer">
+                    <p onclick="showLogin()">Already have an account? Login</p>
+                </div>
+            </div>
+            
+        </div>
+
 
         <div class="main">
             <div class="main-img"><img
@@ -90,8 +141,7 @@
                 <h3>Stree 2</h3>
             </div>
 
-            <div class="card" data-movie-name="Bandaa Singh Chaudhary"
-                data-movie-price="110"><img
+            <div class="card" data-movie-name="Bandaa Singh Chaudhary" data-movie-price="110"><img
                     src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ni4xLzEwICA1LjlLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00414035-czybhjgpyw-portrait.jpg">
                 <h3>Bandaa Singh</h3>
             </div>
