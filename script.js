@@ -47,10 +47,26 @@ function fetchDetails(){
 
     document.getElementById("movie-name").innerText = ` Movie Name : ${movieName}`;
     document.getElementById("movie-price").innerText = ` Ticket Price: ${moviePrice}`;
-    document.getElementById("movie-date").innerText = ` Date :${todaydate}/${todaymonth}/${todayyear}`;
+    document.getElementById("movie-date").innerText = ` Date : ${todaydate}/${todaymonth}/${todayyear}`;
 
 }
 
+function showLogin() {
+    document.getElementById("my-popover").style.display = "flex";
+    document.getElementById("signup-container").style.display="none";
+    document.getElementById("login-container").style.display="flex";
 
+}
+
+// Close the login popover (optional, depending on your requirements)
+function closeLogin() {
+    document.getElementById("my-popover").style.display = "none";
+}
+
+function showSignup(){
+   
+    document.getElementById("login-container").style.display="none"
+    document.getElementById("signup-container").style.display="flex";
+}
 
 
